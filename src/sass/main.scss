@@ -1,9 +1,15 @@
-@import './tools/vars';
+@import './utils/vars';
+@import './utils/reset';
+
 
 @import './base/common';
+@import './utils/mixins';
 @import './components/button';
+@import './utils/tools';
+
 
 @import './layout/hero-header';
+@import './layout/mobile-menu';
 @import './layout/products';
 @import './layout/about';
 @import './layout/advantages';
@@ -11,3 +17,6 @@
 @import './layout/customer-reviews';
 @import './layout/contacts';
 @import './layout/footer';
+@import './layout/buy-now-modal';
+@import './layout/our-location-modal';
+@import './layout/read-more-modal';

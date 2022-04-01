@@ -1,0 +1,24 @@
+:root {
+    --white-text-color: #FFFFFF;
+    --black-text-color: #000000;
+    --grey-text-color: #907E82;
+    --pink-text-color: #FFA5BA;
+    --red-text-color: #D41443;
+    --accent-text-color: #D41443;
+    --pink-bg-color: #FFB8CA;
+    --white-bg-color: #E5E5E5;
+    --pale-pink-bg-color: #FFF5F6;
+    --underline-color: #E1E1E1;
+
+    --btn-accent-bg-color: #ECEBEB;
+    --btn-hero-border-radius: 20px;
+    --btn-border-radius: 22px;
+
+    --desk-regular-size: 16px;
+    --tab-regular-size: 14px;
+    --tel-regular-size: 12px;
+}
+
+$mob: 480px;
+$tab: 768px;
+$desk: 1280px;
