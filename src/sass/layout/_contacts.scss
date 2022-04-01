@@ -1,0 +1,63 @@
+.container-contacts {
+    margin: 0 auto;;
+    height: 1500px;
+    background-image: linear-gradient(#E5E5E5 25%, #FFF5F6 25%);
+
+    padding: 48px 20px;
+    
+    justify-content: center;
+
+    @include media (480px) {
+        width: 480px;
+    }
+
+    @include media (768px) {
+        width: 768px;
+        height: 732px;
+        background-image: linear-gradient(#E5E5E5 28%, #FFF5F6 28%);
+        padding: 40px 18px 80px 18px;
+    }
+
+    @include media (1280px) {
+        width: 1280px;
+        height: 882px;
+        background-image: linear-gradient(#E5E5E5 25%, #FFF5F6 25%);
+        padding: 120px 16px;
+    }
+}
+
+.contacts {
+    margin-bottom: 32px;
+
+}
+
+.contacts__card:not(:last-child) {
+   margin-bottom:  20px;
+}
+
+.contacts__card {
+   margin: 0 auto;
+   width: 280px;
+   height: 412px;
+   border-radius: 24px;
+   background-color: #ffffff;
+   padding: 40px 32px;
+}
+.contacts__item {
+   position:relative;
+   border: 1, solid, red; 
+}
+.contacts__name {
+    width: 80px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'DM Sans';
+    @include btn-form(80px, 16px, 4px);
+    @include font(500, 12px, 22px, 0.04em);
+    @include btn-color(#FFFFFF, #F0D1A5, #F0D1A5);
+       
+}
