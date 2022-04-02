@@ -1,0 +1,99 @@
+.section--advantages-background{background-color: #FFF5F6;}
+
+.section--advantages-padding{ padding-bottom: 80px;
+@media screen and (min-width: 1280px){
+    padding-bottom: 120px;}}
+
+.container-adventages{ 
+    @media screen and (min-width: 1280px){
+        width: 1280px;}}
+
+.advantages{@media screen and (min-width: 768px) {
+   display: flex;
+   flex-wrap: wrap;
+   margin-left: calc(-1 * 32px);
+}
+@media screen and (min-width: 1280px){
+    margin-left: calc(-1 * 106px);
+}}
+
+
+
+.advantages__item{@media screen and (min-width: 768px){
+   
+    margin-left:32px;} 
+    @media screen and (min-width: 1280px) {
+        margin-left: 106px;
+    }
+   
+}
+
+
+
+.advantages__item:not(:last-child){
+    margin-bottom: 32px;
+
+    @media screen and (min-width: 768px){margin-bottom: 0;}
+}
+
+.advantages__item:first-child::before {
+    content: "";
+    display: block;
+    background-image: url(../images/img/adv-icon-1.png);
+
+    width: 33px;
+    height: 50px;
+}
+.advantages__item::before {
+    content: "";
+    display: block;
+    background-image: url(../images/img/adv-icon-2.png);
+
+    width: 50px;
+    height: 50px;
+}
+.advantages__item:last-child::before {
+    content: "";
+    display: block;
+    background-image: url(../images/img/adv-icon-3.png);
+
+    width: 44px;
+    height: 50px;
+}
+
+
+.advantages__text{
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.66;
+    letter-spacing: 0.04em;
+    
+
+    width: 230px;
+    
+    @media screen and (min-width: 768px){
+        width: 170px;
+   }
+    @media screen and (min-width: 1280px) {
+        width: 288px;
+    }
+    
+}
+
+
+.advantages-text{
+    font-family: 'Titan One',
+    cursive;
+    font-size: 36px;
+    line-height: 1.13;
+    letter-spacing: 0.04em;
+
+    color: var(--accent-text-color);
+    margin-top: 16px;
+    margin-bottom: 13px;
+    @media screen and (min-width: 768px){margin-top: 36px;}
+    @media screen and (min-width: 1280px){
+        margin-top: 40px;
+        margin-bottom: 16px;}
+    
+}
