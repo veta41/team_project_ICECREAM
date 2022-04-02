@@ -31,11 +31,11 @@
 
 }
 
-.contacts__card:not(:last-child) {
+.contacts__item:not(:last-child) {
    margin-bottom:  20px;
 }
 
-.contacts__card {
+.contacts__item {
    margin: 0 auto;
    width: 280px;
    height: 412px;
@@ -43,9 +43,9 @@
    background-color: #ffffff;
    padding: 40px 32px;
 }
-.contacts__item {
+.contacts__card {
    position:relative;
-   border: 1, solid, red; 
+   border: 1px, solid, red; 
 }
 .contacts__name {
     width: 80px;
