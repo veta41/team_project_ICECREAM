@@ -1,7 +1,7 @@
 @mixin font($fw, $fs, $lh, $ls) {
     font-weight: $fw;
     font-size: $fs;
-    line-height: ($lh / $fs);
+    line-height: calc($lh / $fs);
     letter-spacing: $ls;
 }
 
@@ -11,6 +11,21 @@
     margin-right: $mr;
 }
 
+@mixin btn-form($wi, $hi, $br) {
+    width: $wi;
+    height: $hi;
+    border-radius: $br;
+}
+
+@mixin btn-color($col, $bgc, $bgc2) {
+    background-color: $bgc;
+    color: $col;
+
+    &:hover,
+    &:focus {
+        background-color: $bgc2;
+    }
+}
 
 @mixin media($size) {
     @media screen and (min-width: $size) {
