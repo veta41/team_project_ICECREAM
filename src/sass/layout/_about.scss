@@ -1,0 +1,75 @@
+.about {
+    background-color: var(--secondary-bg-color);
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    @include media($tab) {
+        padding-top: 20px;
+        padding-bottom: 80px;
+    }
+        
+    @include media($desk) {
+        padding-top: 60px;
+        padding-bottom: 99px;
+    }
+}
+
+.about__pre-title {
+    @include font(400, 18px, 21px, 0.04em);
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--main-text-color);
+    margin-bottom: 15px;
+
+    @include media($tab) {
+        @include font(null, 26px, 30px, null);
+        margin-bottom: 16px;
+    }
+        
+    @include media($desk) {
+        @include font(null, 30px, 34px, null);
+    }
+}
+
+.title {
+    @include font(400, 34px, 39px, 0.06em);
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--accent-text-color);
+    margin-bottom: 32px;
+
+    @include media($tab) {
+        @include font(null, 48px, 55px, null);
+        margin-bottom: 40px;
+    }
+
+    @include media($desk) {
+        @include font(null, 58px, 66px, null);
+            margin-bottom: 79px;
+    }
+
+    background-image: url();
+}
+
+.about-text {
+    @include font(500, 12px, 19px, 0.04em);
+    margin-bottom: 20px;
+
+    @include media($tab) {
+        @include font(null, 14px, 25px, null);
+        margin-bottom: 40px;
+    }
+
+        @include media($desk) {
+            @include font(null, 16px, 28px, null);
+        }
+}
+
+.about-text__description-top {
+    color: var(--basic-text-color);
+    margin-bottom: 32px;
+}
+
+.about-text__description-bottom {
+    color: var(--secondary-text-color);
+}
