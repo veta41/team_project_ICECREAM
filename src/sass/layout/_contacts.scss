@@ -1,34 +1,54 @@
+.section-contacts {
+ 
+    background-image: linear-gradient(#E5E5E5 22%, #FFF5F6 22%);
+        @include media ($tab) {
+         background-image: linear-gradient(#E5E5E5 19%, #FFF5F6 19%);
+           
+        }
+    @include media ($desk) {
+        margin: 0 auto;
+        max-width: 1600px;
+        background-image: linear-gradient(#E5E5E5 14%, #FFF5F6 14%);
+
+    }
+
+}
 .container-contacts {
-    // border: solid;
-    margin: 0 auto;;
-    height: 1500px;
-    background-image: linear-gradient(#E5E5E5 25%, #FFF5F6 25%);
-
-    padding: 48px 20px;
-    
+    margin: 0 auto;
+    height: 1454px;
+    padding:0 20px 48px 20px;    
     justify-content: center;
-
-    @include media (480px) {
-        width: 480px;
+    @include media ($mob) {
+        width: $mob;
     }
 
-    @include media (768px) {
-        width: 768px;
-        height: 732px;
-        background-image: linear-gradient(#E5E5E5 28%, #FFF5F6 28%);
-        padding: 40px 18px 80px 18px;
+    @include media ($tab) {
+        width: $tab;
+        height: 652px;
+        padding: 0 16px 40px 16px;
     }
 
-    @include media (1280px) {
-        width: 1280px;
-        height: 882px;
-        background-image: linear-gradient(#E5E5E5 25%, #FFF5F6 25%);
-        padding: 120px 16px;
+    @include media ($desk) {
+        width: $desk;
+        height: 760px;
+        padding-bottom: 120px;
+        
     }
+            
 }
 
 .catering__list {
     margin-bottom: 32px;
+    @include media ($tab) {
+      margin-bottom: 40px;  
+        display: flex;
+        flex-wrap: wrap;        
+    }
+    
+    @include media ($desk) {
+        margin-bottom: 60px; 
+    }
+   
 }
 
 .catering__item {
@@ -42,6 +62,21 @@
    padding: 40px 32px;
    &:not(:last-child) {
    margin-bottom:  20px;
+}
+    @include media ($tab) {
+    margin-bottom: 0px;
+    height: 528px;
+    width: calc((100% - 64px) / 3);
+    &:not(:last-child) {
+        margin-bottom: 0px;
+    }
+    
+}
+
+    @include media ($desk) {
+    padding: 40px 40px;
+    height: 538px;
+    
 }
 }
 .cater-card {
@@ -58,11 +93,17 @@
     @include btn-form(80px, 16px, 4px);
     @include font(500, 12px, 22px, 0.04em);
    margin-bottom: 20px; 
+   
    &_beige {
+       
        @include btn-color(#FFFFFF, #F0D1A5, #F0D1A5);
    }   
     &_green {
         @include btn-color(#FFFFFF, #C2E297, #C2E297);
+    }
+    @include media ($tab) {
+      @include font(500, 16px, 30px, 0.04em); 
+        margin-bottom: 32px;
     }
 }
 .cater-place {
@@ -70,29 +111,64 @@
     border-bottom: 1px solid #E1E1E1;
     margin-bottom: 24px;
     &__name {
-    @include font(500, 12px, 22px, 0.04em);
-    color: #000000;  
-    padding-bottom: 8px  
+        @include font(500, 12px, 22px, 0.04em);
+        color: #000000;  
+        margin-bottom: 8px;  
+        @include media ($tab){
+            @include font(500, 14px, 26px, 0.04em);
+            margin-bottom: 12px;
+        }
+                @include media ($desk) {
+                    @include font(500, 16px, 30px, 0.04em);
+                    margin-bottom: 8px;
+                }
     }
     &__text {
         @include font(500, 12px, 18px, null);
         color: #907E82;
+        @include media ($tab) {
+            @include font(500, 14px, 23px, 0.04em);
+        }
+        @include media ($desk) {
+            @include font(500, 16px, 29px, 0.04em);
+        }
     }
 }
 .cater-time{
     padding-bottom: 24px;
     border-bottom: 1px solid #E1E1E1;
     margin-bottom: 24px;
+    @include media ($tab) {
+        padding-bottom: 32px;
+        margin-bottom: 32px;
+    }
     &__name {
         @include font(500, 12px, 22px, 0.04em);
         color: #000000;
+        @include media ($tab) {
+            @include font(500, 14px, 26px, 0.04em);
+        }
+        
+        @include media ($desk) {
+            @include font(500, 16px, 30px, 0.04em);
+        }
     }
     &__time {
         @include font(500, 12px, 18px, null);
         color: #FFA5BA;
+            @include media ($tab) {
+                @include font(500, 14px, 26px, 0.04em);
+            }
+            
+            @include media ($desk) {
+                @include font(500, 16px, 30px, 0.04em);
+            }
     }
     &__item:not(:last-child){
         margin-bottom: 8px;
+        @include media ($tab){
+            margin-bottom: 12px;
+        }
     }
 }
 a {
@@ -103,7 +179,16 @@ a {
     width: 179px;
     height: 38px;
     @include font(500, 12px, 18px, null);
-    
+@include media ($tab) {
+    @include font(500, 14px, 26px, null);
+    width: 159px;
+    height: 48px;
+}
+    @include media ($desk) {
+        @include font(500, 16px, 29px, null);
+        width: 243px;
+        height: 50px;
+    }
 }
 .cater-cont__link {
 &__mail,
@@ -119,18 +204,42 @@ a {
 }
 .cater-btn {
     border-radius: 22px;
+     
+    width: 162px;
+    @include indents(0, 0, auto, auto);
+    @include media ($tab) {
+        width: 380px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+    @include media ($desk){
+        width: 393px;
+    }
     &__locat {
     @include btn-color( #FFFFFF,#D41342, #D41342);
-    @include btn-form(162px, 44px, 22px);
-    @include indents(0, 0, auto, auto);
     @include font(700, 16px, 21px, null);
+    @include btn-form(162px, 44px, 22px);
+    @include media ($tab) {
+        @include btn-form(192px, 44px, 22px);
+    }
+    @include media ($desk) {
+        @include btn-form(198px, 44px, 22px);
+    }
     margin-bottom: 10px;
 }
     &__franch { 
-    @include btn-form(162px, 44px, 22px);
-    @include indents(0, 0, auto, auto);
-    @include font(700, 16px, 21px, null);
-    @include btn-color(#D41443, #FFFFFF, #ECEBEB);
+        @include font(700, 16px, 21px, null);
+        @include btn-color(#D41443, #FFFFFF, #ECEBEB);
+        @include btn-form(162px, 44px, 22px);
+        @include media ($tab) {
+            @include btn-form(174px, 44px, 22px);
+        }
+
+        @include media ($desk) {
+            @include btn-form(180px, 44px, 22px);
+        }
 }
 }
 .cater-btn__icons {
