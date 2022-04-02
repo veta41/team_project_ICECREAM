@@ -1,4 +1,8 @@
-.header {
+.hero-header {
+    position: relative;
+    min-height: 502px;
+    background-color: var(--main-bg-color);
+
     padding-top: 8px;
     padding-right: 20px;
     padding-left: 20px;
@@ -16,10 +20,10 @@
     }
 }
 
-// .header__container {
-//     display: flex;
-//     align-items: center;
-//   }
+.header {
+    
+}
+
 .nav {
     display: flex;
     align-items: center;
@@ -36,9 +40,63 @@
 }
 
 .hero-title {
+    width: 218px;
+    height: 106px;
+    margin-top: 136px;
+    margin-bottom: 20px;
+    margin-right: 0px;
+
+    font-family: 'Titan One';
+    @include font(400, 26px, 30px, 0.04em);
+    text-transform: uppercase;
+    color: var(--primary-text-color);
+}
+
+.hero-title__current {
+    font-family: 'Titan One';
+    @include font(400, 48px, 46px, null);
+    text-transform: uppercase;
+    color: var(--accent-text-color);
+}
+
+.hero-ellipse {
+    position: absolute;
+}
+
+.button-wrap {
+    display: flex;
+}
+
+.hero-primary-btn {
+    width: 62.4px;
+    height: 24px;
+    margin-right: 8px;
+
+    font-family: 'DM Sans';
+    @include font (400, 8px, 10px, null);
+
+    color: var(--primary-text-color);
+    background-color: #D41443;
+    border-radius: var(--btn-hero-border-radius);
 
 }
 
-.hero-title__accent {
-    
+.hero-secondary-btn {
+    width: 82.8px;
+    height: 24px;
+    font-family: 'DM Sans';
+    @include font (400, 8px, 10px, null);
+  
+
+    color: var(--accent-text-color) ;
+    background-color: #FFFFFF;
+    border-radius: var(--btn-hero-border-radius);
 }
+
+// .hero-title {
+// color: var(--primary-text-color);
+// }
+
+// .hero-title__accent {
+//     color: var(--accent-text-color);
+// }
