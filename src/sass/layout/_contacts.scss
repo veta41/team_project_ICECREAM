@@ -1,4 +1,5 @@
 .container-contacts {
+    // border: solid;
     margin: 0 auto;;
     height: 1500px;
     background-image: linear-gradient(#E5E5E5 25%, #FFF5F6 25%);
@@ -26,30 +27,28 @@
     }
 }
 
-.contacts {
+.catering__list {
     margin-bottom: 32px;
-
 }
 
-.contacts__item:not(:last-child) {
-   margin-bottom:  20px;
-}
-
-.contacts__item {
+.catering__item {
    margin: 0 auto;
    width: 280px;
    height: 412px;
    border-radius: 24px;
+   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+   
    background-color: #ffffff;
    padding: 40px 32px;
+   &:not(:last-child) {
+   margin-bottom:  20px;
 }
-.contacts__card {
+}
+.cater-card {
    position:relative;
-   border: 1px, solid, red; 
+//    border: 1px solid red; 
 }
-.contacts__name {
-    width: 80px;
-    height: 16px;
+.catering__name {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,6 +57,68 @@
     font-family: 'DM Sans';
     @include btn-form(80px, 16px, 4px);
     @include font(500, 12px, 22px, 0.04em);
-    @include btn-color(#FFFFFF, #F0D1A5, #F0D1A5);
-       
+   margin-bottom: 20px; 
+   &_beige {
+       @include btn-color(#FFFFFF, #F0D1A5, #F0D1A5);
+   }   
+    &_green {
+        @include btn-color(#FFFFFF, #C2E297, #C2E297);
+    }
+}
+.cater-place {
+    padding-bottom: 24px;
+    border-bottom: 1px solid #E1E1E1;
+    margin-bottom: 24px;
+    &__name {
+    @include font(500, 12px, 22px, 0.04em);
+    color: #000000;  
+    padding-bottom: 8px  
+    }
+    &__text {
+        @include font(500, 12px, 18px, null);
+        color: #907E82;
+    }
+}
+.cater-time{
+    padding-bottom: 24px;
+    border-bottom: 1px solid #E1E1E1;
+    margin-bottom: 24px;
+    &__name {
+        @include font(500, 12px, 22px, 0.04em);
+        color: #000000;
+    }
+    &__time {
+        @include font(500, 12px, 18px, null);
+        color: #FFA5BA;
+    }
+    &__item:not(:last-child){
+        margin-bottom: 8px;
+    }
+}
+.cater-cont {
+    
+    width: 179px;
+    height: 38px;
+    @include font(500, 12px, 18px, null);
+    color: #907E82;
+}
+
+.cater-btn {
+    
+    border-radius: 22px;
+ 
+    
+    &__locat {
+    @include btn-color( #FFFFFF,#D41342, #D41342);
+    @include btn-form(161px, 44px, 22px);
+    @include indents(0, 0, auto, auto);
+    @include font(700, 16px, 21px, null);
+    margin-bottom: 10px;
+}
+    &__franch { 
+    @include btn-form(161px, 44px, 22px);
+    @include indents(0, 0, auto, auto);
+    @include font(700, 16px, 21px, null);
+    @include btn-color(#D41443, #FFFFFF, #ECEBEB);
+}
 }
