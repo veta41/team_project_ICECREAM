@@ -1,6 +1,6 @@
 .container {
     // Вёрстка адаптивная, точки перелома 480px, 768px, 1280px.
-    padding: 0 16px;
+    padding: 0 20px;
     margin: 0 auto;
 
     @media screen and (min-width: 480px) {
@@ -8,10 +8,11 @@
     }
 
     @media screen and (min-width: 768px) {
+        padding: 0 16px;
         width: 768px;
     }
 
     @media screen and (min-width: 1280px) {
-        max-width: 1280px;
+        width: 1280px;
     }
 }
