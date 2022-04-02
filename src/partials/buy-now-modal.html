@@ -1,0 +1,27 @@
+<button data-modal-open type="button" class="hero__button button">Заказать услугу</button>
+<!-- Modal -->
+<div data-modal class="backdrop backdrop--is-hidden">
+  <div class="modal">
+    <form class="form" action="javascript:void(0);">
+      <b class="form__title">BUY NOW</b>
+      <label class="form__field">
+        <input class="form__input" type="text" name="username" autocomplete="name" required />
+      </label>
+
+      <label class="form__field">
+        <input class="form__input" type="tel" name="phone-number" autocomplete="tel" required />
+      </label>
+
+      <label class="form__field">
+        <input class="form__input" type="email" name="mail" autocomplete="email" required />
+      </label>
+      <div class="form__button-wrapper">
+        <button data-modal-close class="button form__button">Deny</button>
+
+        <button class="button form__button" type="submit">Order</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="./modal.js"></script>
