@@ -3,6 +3,19 @@
     padding-top: 40px;
     padding-bottom: 40px;
 
+    @media screen and (max-width: 767px) {
+        background-image: url('../images/img/m2-mob_1x.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position-y: 574px;
+    
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url('../images/img/m2-mob_2x.png');
+        }
+    }
+
     @include media($tab) {
         padding-top: 20px;
         padding-bottom: 80px;
@@ -11,6 +24,17 @@
     @include media($desk) {
         padding-top: 60px;
         padding-bottom: 99px;
+
+        background-image: url('../images/img/m2-desk_1x.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position-y: 255px;
+        
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url('../images/img/m2-desk_2x.png');
+        }
     }
 }
 
@@ -47,22 +71,35 @@
         @include font(null, 58px, 66px, null);
             margin-bottom: 79px;
     }
+}
 
-    background-image: url();
+.about-box {
+    @include media($tab) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .about-text {
     @include font(500, 12px, 19px, 0.04em);
-    margin-bottom: 20px;
+    max-width: 220px;
+
+    @media screen and (max-width: 767px) {
+        margin-top: 40px;
+    }
 
     @include media($tab) {
         @include font(null, 14px, 25px, null);
-        margin-bottom: 40px;
+        margin-left: 32px;
+        max-width: 334px;
     }
 
-        @include media($desk) {
-            @include font(null, 16px, 28px, null);
-        }
+    @include media($desk) {
+        @include font(null, 16px, 28px, null);
+        margin-left: 139px;
+        max-width: 463px;
+    }
 }
 
 .about-text__description-top {
@@ -72,4 +109,10 @@
 
 .about-text__description-bottom {
     color: var(--secondary-text-color);
+    margin-bottom: 20px;
+
+    @include media($tab) {
+        @include font(null, 14px, 25px, null);
+        margin-bottom: 40px;
+    }
 }
