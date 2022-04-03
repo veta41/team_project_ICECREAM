@@ -54,6 +54,7 @@
     align-items: center;
     margin-left: 175px;
     margin-right: auto;
+    z-index: 1;
     
    
     @media screen and (max-width: 1279px) {
@@ -79,23 +80,29 @@
 
 
 
-.hero-numbers {
+.hero-advantages {
     position: absolute;
+    z-index: 1;
     @media screen and (max-width: 767px) {
         display: none;
 }
     @include media(768px) {
         top: 94px;
-        left: 693px;
+        right: 42px;
     }
 
 
     @include media(1280px) {
         top: 157px;
-        left: 1192px;
+        right: 34px;
     }
 }
-.hero-numbers__item {
+
+.hero-advantages__item:first-child {
+padding-bottom: 17px;
+}
+
+.hero-advantages__numbers {
     font-family: 'Titan One';
     font-style: normal;
     text-align: right;
@@ -114,7 +121,7 @@
 
 }
 
-.hero-numbers__text {
+.hero-advantages__text {
     font-family: 'DM Sans';
     text-align: right;
     color: var(--primary-text-color);
@@ -184,11 +191,12 @@
 
 .hero__slogan {
     position: absolute;
+    z-index: 1;
     bottom: 81px;
     left: 184px;
 
     width: 114px;
-    heigth: 48px;
+    height: 48px;
     color: #FFFFFF;
     font-family: 'DM Sans';
     @include font(400, 8px, 12px, null);
@@ -201,7 +209,7 @@
         left: 229px;
 
         width: 200px;
-        heigth: 78px;
+        height: 78px;
         @include font(400, 14px, 20px, null);
     }
 }
@@ -281,6 +289,7 @@
     left: 960px;
 }
 }
+
 .arrow-right {
     position: absolute;
     @media screen and (max-width: 767px) {
@@ -295,6 +304,48 @@
 @include media(1280px) {
     bottom: 84px;
     left: 229px;
+}
+}
+
+.white-ellipse {
+    position: absolute;
+    @media screen and (max-width: 767px) {
+        display: none;
+}
+
+@include media(768px) {
+    width: 16px;
+    height: 16px;
+    top: 92px;
+    left: 720px;
+}
+
+@include media(1280px) {
+    width: 30px;
+    height: 30px;
+    top: 153px;
+    left: 1234px;
+}
+}
+
+.white-ellipse-second {
+    position: absolute;
+    @media screen and (max-width: 767px) {
+        display: none;
+}
+
+@include media(768px) {
+    width: 16px;
+    height: 16px;
+    top: 152px;
+    left: 720px;
+}
+
+@include media(1280px) {
+    width: 30px;
+    height: 30px;
+    top: 245px;
+    left: 1234px;
 }
 }
 
