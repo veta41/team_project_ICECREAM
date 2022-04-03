@@ -1,0 +1,51 @@
+<button data-modal-buy-now-open type="button" class="hero__button button">Заказать услугу</button>
+<!-- Modal -->
+<div data-modal-buy-now class="backdrop-buy-now backdrop-buy-now--is-hidden">
+  <div class="modal-buy-now">
+    <form class="form" action="javascript:void(0);">
+      <b class="form__title">BUY NOW</b>
+      <label class="form__field">
+        <input
+          class="form__input"
+          type="text"
+          name="username"
+          autocomplete="name"
+          placeholder="Stepan"
+          required
+        />
+        <span class="form__label">name</span>
+      </label>
+
+      <label class="form__field">
+        <input
+          class="form__input"
+          type="tel"
+          name="phone-number"
+          autocomplete="tel"
+          placeholder="+380-55-111-11-11"
+          required
+        />
+        <span class="form__label">phone</span>
+      </label>
+
+      <label class="form__field">
+        <input
+          class="form__input"
+          type="email"
+          name="mail"
+          autocomplete="email"
+          placeholder="my@mail.com"
+        />
+        <span class="form__label">email</span>
+      </label>
+      <div class="form__button-wrapper">
+        <button class="btn btn__modal form__button form__button--open" type="submit">Order</button>
+      </div>
+    </form>
+    <button data-modal-buy-now-close class="btn btn__modal form__button form__button--close">
+      Deny
+    </button>
+  </div>
+</div>
+
+<script src="./js/modal-buy-now.js"></script>

@@ -1,0 +1,13 @@
+.section {
+    padding-bottom: 80px;
+
+    @media screen and(min-width: 1280px){
+        padding-bottom: 120px;
+    }
+}
+
+.thumb {
+    background-image: linear-gradient(to top,
+            #ffff 60%,
+            #FFF5F6 40%)
+}
