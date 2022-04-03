@@ -21,10 +21,7 @@
 
 .backdrop.is-hidden .modal {
     opacity: 0;
-
-    @media screen and (min-width: 480px) {
-        transform: translate(-50%, -50%) scale(0.9);
-    }
+    transform: translate(-50%, -50%) scale(0.9);
 }
 
 .modal {
