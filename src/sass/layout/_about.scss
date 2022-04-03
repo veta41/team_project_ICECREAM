@@ -39,6 +39,7 @@
 }
 
 .about__pre-title {
+    font-family: 'Titan One';
     @include font(400, 18px, 21px, 0.04em);
     text-align: center;
     text-transform: uppercase;
@@ -56,6 +57,7 @@
 }
 
 .about__title {
+    font-family: 'Titan One';
     @include font(400, 34px, 39px, 0.06em);
     text-align: center;
     text-transform: uppercase;
