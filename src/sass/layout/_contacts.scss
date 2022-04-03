@@ -10,22 +10,25 @@
      }
 }
 .container-contacts {
-    margin: 0 auto;
+    // margin: 0 auto;
     // height: 1454px;
-    padding:0 20px 48px 20px;    
+    // padding:0 20px 48px 20px;   
+    margin-bottom: 48px; 
     justify-content: center;
-    @include media ($mob) {
-        width: $mob;
-    }
+    // @include media ($mob) {
+        // width: $mob;
+    // }
     @include media ($tab) {
-        width: $tab;
+        // width: $tab;
         // height: 652px;
-        padding: 0 16px 40px 16px;
+        // padding: 0 16px 40px 16px;
+        margin-bottom: 40px;
     }
     @include media ($desk) {
-        width: $desk;
+        // width: $desk;
         // height: 760px;
-        padding-bottom: 120px;
+        // padding-bottom: 120px;
+        margin-bottom: 120px;
     }
  }
 
