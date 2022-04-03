@@ -1,0 +1,243 @@
+.products {
+
+  @media  screen and (max-width:1279px){
+  padding-bottom: 40px;
+  }
+
+  @media  screen and (min-width:1280px){
+    padding-bottom: 60px;
+    }
+}
+
+
+
+.products__title-text{
+  margin-bottom: 15px;
+  font-family: 'Titan One', sans-serif;
+  
+   font-size: 18px;
+   line-height: 1.17;
+   text-align: center;
+   text-transform: uppercase;
+   color: var(--main-text-color);
+   text-align: center;
+
+   @media  screen and (min-width:768px) {
+    margin-bottom: 18px;
+    font-size: 26px;
+    line-height: 1.15;
+  }
+
+  @media  screen and (min-width:1280px) {
+    margin-bottom: 16px;
+    font-size: 30px;
+    line-height: 1.13;
+    letter-spacing: 0.04em;
+  }
+ }
+ 
+ .products__title{
+   
+   padding-bottom: 148px;
+   font-family: 'Titan One', sans-serif;
+   font-size: 34px;
+   line-height: 1.15;
+   text-align: center;
+   letter-spacing: 0.04em;
+   text-transform: uppercase;
+   color: var(--accent-text-color);
+
+   @media  screen and (min-width:768px) {
+    padding-bottom: 154px;
+    font-size: 48px;
+    line-height: 1.14;
+  }
+
+  @media  screen and (min-width:1280px) {
+   
+    font-size: 58px;
+    line-height: 1.14;
+    letter-spacing: 0.06em;
+  }
+ 
+ }
+ 
+ .products__item-title{
+ 
+    padding-top: 155px;
+    margin-bottom: 32px;
+    font-family: 'Titan One', sans-serif;
+   font-size: 20px;
+   line-height: 1.15;
+   letter-spacing: 0.04em;
+   text-transform: uppercase;
+   color: var(--primary-text-color);
+   margin-bottom: 32px;
+
+   
+  
+    &::after{
+     display: block;
+     content:'';
+     background-image: url(../images/img/p-ellipsis1x.png);
+     background-repeat: no-repeat;
+     background-size: contain;
+     width: 26px;
+     height: 6px;
+     text-align: center;
+     margin: 32px auto;
+
+     @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    
+      background-image: url(../images/img/p-ellipsis2x.png);
+  }
+   }
+
+   @media  screen and (min-width:1280px) {
+    padding-top: 165px;
+    font-size: 30px;
+    line-height: 1.13;
+    
+  }
+
+  
+ }
+ 
+ .products__item-text{
+   font-weight: 700;
+   font-size: 14px;
+   line-height: 1.52;
+   
+   letter-spacing: 0.04em;
+   color: var(--primary-text-color);
+   margin-bottom: 32px;
+
+   @media  screen and (min-width:768px) {
+    
+    line-height: 1.76;
+    
+  }
+
+   @media  screen and (min-width:1280px) {
+    
+    font-size: 16px;
+    margin-bottom: 60px;
+    
+    
+  }
+ }
+ 
+ .products__list{
+   text-align: center;
+   
+  
+  @media  screen and (min-width:768px) {
+    display: flex;
+    flex-direction: row;
+    margin: -16px;
+  }
+
+  @media  screen and (min-width:1280px) {
+    display: flex;
+    flex-direction: row;
+    margin: -32px;
+  }
+}
+   
+ 
+ .products__item{
+   position: relative;
+   border-radius: 24px;
+   margin: 0 auto;
+
+   @media  screen and (min-width: 768px) {
+    flex-basis: calc((100% - 32px) / 2);
+    margin: 16px;
+  }
+
+  @media  screen and (min-width: 1280px) {
+    flex-basis: calc((100% - 64px) / 2);
+    margin: 32px;
+  }
+
+   &:not(:last-child){
+    @media  screen and (max-width:767px){
+    margin-bottom: 148px;
+  }
+ }
+  
+
+ }
+   .accent--pink{
+     background: var(--bg-cart-cream);
+
+     
+     
+   }
+ 
+   .accent--caramel{
+     background: var(--bg-cart-coffee);
+   }
+ 
+   .accent--green{
+     background: var( --bg-cart-milkshakes);
+   }
+ 
+ 
+ .products__btn{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-bottom: 40px;
+  border: none;
+  background-color: var(--primary-text-color);
+  cursor: pointer;
+ }
+
+ .products-icon{
+   
+ display: flex;
+  justify-content: center;
+ align-items: center;
+
+
+ }
+
+ .products-icon_item{
+   width: 6px;
+   height: 6px;
+   border-radius: 50%;
+   background:var(--primary-text-color);
+   margin-bottom: 32px;
+
+   &:not(:last-child){
+     margin-right: 4px;
+   }
+ }
+
+.products__trumb{
+  position:relative
+}
+
+
+ .products__img{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   
+   margin-bottom: 20px;
+
+   @media  screen and (min-width: 768px) {
+   
+    margin-bottom: 32px;
+   }
+
+  
+ }
+
