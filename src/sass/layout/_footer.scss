@@ -32,6 +32,7 @@
         text-transform: uppercase;
         color: var(--main-text-color);
         margin-bottom: 16px;
+        width: 232px;
 
         @media screen and (min-width: 768px) {
             font-size: 26px;
@@ -59,6 +60,7 @@
         letter-spacing: 0.04em;
         text-transform: uppercase;
         color: var(--accent-text-color);
+        width: 200px;
 
         @media screen and (min-width: 768px) {
             font-size: 48px;
