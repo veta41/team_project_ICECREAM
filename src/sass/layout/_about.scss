@@ -1,0 +1,134 @@
+.about {
+    background-color: var(--secondary-bg-color);
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    @media screen and (max-width: 767px) {
+        background-image: url('../images/img/m2-mob_1x.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position-y: 574px;
+    
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url('../images/img/m2-mob_2x.png');
+        }
+    }
+
+    @include media($tab) {
+        padding-top: 20px;
+        padding-bottom: 80px;
+    }
+        
+    @include media($desk) {
+        padding-top: 60px;
+        padding-bottom: 99px;
+
+        background-image: url('../images/img/m2-desk_1x.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position-y: 255px;
+        
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url('../images/img/m2-desk_2x.png');
+        }
+    }
+}
+
+.about__pre-title {
+    font-family: 'Titan One';
+    @include font(400, 18px, 21px, 0.04em);
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--main-text-color);
+    margin-bottom: 15px;
+
+    @include media($tab) {
+        @include font(null, 26px, 30px, null);
+        margin-bottom: 16px;
+    }
+        
+    @include media($desk) {
+        @include font(null, 30px, 34px, null);
+    }
+}
+
+.about__title {
+    font-family: 'Titan One';
+    @include font(400, 34px, 39px, 0.06em);
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--accent-text-color);
+    margin-bottom: 32px;
+
+    @include media($tab) {
+        @include font(null, 48px, 55px, null);
+        margin-bottom: 40px;
+    }
+
+    @include media($desk) {
+        @include font(null, 58px, 66px, null);
+            margin-bottom: 79px;
+    }
+}
+
+.about-box {
+    @include media($tab) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.about-text {
+    @include font(500, 12px, 19px, 0.04em);
+    max-width: 220px;
+
+    @media screen and (max-width: 767px) {
+        margin-top: 40px;
+    }
+
+    @include media($tab) {
+        @include font(null, 14px, 25px, null);
+        margin-left: 32px;
+        max-width: 334px;
+    }
+
+    @include media($desk) {
+        @include font(null, 16px, 28px, null);
+        margin-left: 139px;
+        max-width: 463px;
+    }
+}
+
+.about-text__description-top {
+    color: var(--basic-text-color);
+    margin-bottom: 32px;
+}
+
+.about-text__description-bottom {
+    color: var(--secondary-text-color);
+    margin-bottom: 20px;
+
+    @include media($tab) {
+        @include font(null, 14px, 25px, null);
+        margin-bottom: 40px;
+    }
+}
+
+.btn-about {
+    @include indents(0, 0, auto, 0px);
+    @include btn-form(176px, 44px, 22px);
+    @include btn-color(#D41443, #FFFFFF, #ECEBEB);
+    @include font(700, 16px, 21px, null);
+    border: none;
+}
+
+.bnt-about__icon {
+    width: 4.43px;
+    height: 8px;
+    margin-left: 13.62px;
+}
