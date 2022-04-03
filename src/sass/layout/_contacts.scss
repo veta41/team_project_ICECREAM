@@ -1,36 +1,18 @@
 .section-contacts {
-     background-image: linear-gradient(#E5E5E5 22%, #FFF5F6 22%);
-        @include media ($tab) {
+    padding-bottom: 48px; 
+    justify-content: center;    
+    background-image: linear-gradient(#E5E5E5 22%, #FFF5F6 22%);
+    @include media ($tab) {
+         padding-bottom: 40px;   
          background-image: linear-gradient(#E5E5E5 19%, #FFF5F6 19%);
-        }
+    }
     @include media ($desk) {
         margin: 0 auto;
+        padding-bottom: 120px;
         // max-width: 1600px;
         background-image: linear-gradient(#E5E5E5 14%, #FFF5F6 14%);
      }
 }
-.container-contacts {
-    // margin: 0 auto;
-    // height: 1454px;
-    // padding:0 20px 48px 20px;   
-    margin-bottom: 48px; 
-    justify-content: center;
-    // @include media ($mob) {
-        // width: $mob;
-    // }
-    @include media ($tab) {
-        // width: $tab;
-        // height: 652px;
-        // padding: 0 16px 40px 16px;
-        margin-bottom: 40px;
-    }
-    @include media ($desk) {
-        // width: $desk;
-        // height: 760px;
-        // padding-bottom: 120px;
-        margin-bottom: 120px;
-    }
- }
 
 .catering__list {
     max-width: $mob;
@@ -84,7 +66,7 @@
     justify-content: center;
     text-align: center;
     text-transform: uppercase;
-    font-family: 'DM Sans';
+    // font-family: 'DM Sans';
     @include btn-form(80px, 16px, 4px);
     @include font(500, 12px, 22px, 0.04em);
    margin-bottom: 20px; 
