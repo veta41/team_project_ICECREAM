@@ -85,10 +85,10 @@
 
 .about-text {
     @include font(500, 12px, 19px, 0.04em);
-    max-width: 220px;
 
     @media screen and (max-width: 767px) {
         margin-top: 40px;
+        padding-right: 60px;
     }
 
     @include media($tab) {
