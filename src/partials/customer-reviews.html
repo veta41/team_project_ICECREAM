@@ -1,109 +1,92 @@
 <section class="customers-review">
+  <h2 class="customers-riview__title visually-hidden">Customers reviews</h2>
   <div class="container">
-    <div class="slider">
-      <div class="slider__item">
+    <div class="review-slider">
+      <div class="review-slider__item">
         <img
           srcset="./images/img/face1_1x.png 1x, ./images/img/face1_2x.png 2x"
           src="./images/img/face1_1x.png"
           alt="First reviewer photo"
-          class="slider__img"
+          class="review-slider__img"
         />
-        <div class="slider__wrapper">
-          <div class="slider__gradient">
-            <p class="slider__text">
+        <div class="review-slider__wrapper">
+          <div class="review-slider__gradient">
+            <p class="review-slider__text">
+              <!-- Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In
+              hendrerit nulla quam nunc, accumsan congue. Lorem ipsum primis in nibh vel risus. -->
               Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In
-              hendrerit nulla quam nunc, accumsan congue. Lorem ipsum primis in nibh vel risus.
+              hendrerit nulla quam nunc, accumsan congue.
+              <span
+                class="txt-rotate"
+                data-period="2000"
+                data-rotate='[ " Lorem ipsum primis in nibh vel risus." ]'
+              ></span>
             </p>
           </div>
         </div>
-        <p class="slider-dots__text">Emily, Los Angeles</p>
+        <p class="review-slider-dots__text">Emily, Los Angeles</p>
       </div>
 
-      <div class="slider__item">
+      <div class="review-slider__item">
         <img
           srcset="./images/img/face2_1x.png 1x, ./images/img/face2_2x.png 2x"
           src="./images/img/face2_1x.png"
           alt="Second reviewer photo"
-          class="slider__img"
+          class="review-slider__img"
         />
-        <div class="slider__wrapper">
-          <div class="slider__gradient">
-            <p class="slider__text">
+        <div class="review-slider__wrapper">
+          <div class="review-slider__gradient">
+            <p class="review-slider__text">
+              <!-- In hendrerit nulla quam nunc, accumsan congue. Lorem ipsum primis in nibh vel risus.
+              Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. -->
+              <!-- In hendrerit nulla quam nunc, accumsan congue. Lorem ipsum primis in nibh vel risus.
+              Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. -->
               In hendrerit nulla quam nunc, accumsan congue. Lorem ipsum primis in nibh vel risus.
-              Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem.
+              Nullam viverra consectetuer.
+              <span
+                class="txt-rotate"
+                data-period="2000"
+                data-rotate='[ " Quisque cursus et, porttitor risus. Aliquam sem." ]'
+              ></span>
             </p>
           </div>
         </div>
-        <p class="slider-dots__text">Alexa, New-York</p>
+        <p class="review-slider-dots__text">Alexa, New-York</p>
       </div>
 
-      <div class="slider__item">
+      <div class="review-slider__item">
         <img
           srcset="./images/img/face3_1x.png 1x, ./images/img/face3_2x.png 2x"
           src="./images/img/face3_1x.png"
           alt="Third"
-          class="slider__img"
+          class="review-slider__img"
         />
-        <div class="slider__wrapper">
-          <div class="slider__gradient">
-            <p class="slider__text">
+        <div class="review-slider__wrapper">
+          <div class="review-slider__gradient">
+            <p class="review-slider__text">
+              <!-- Quisque cursus et, porttitor risus. Aliquam sem. Nullam viverra consectetuer. In
+              hendrerit nulla quam nunc, accumsan congue. Lorem ipsum primis in nibh vel risus. -->
               Quisque cursus et, porttitor risus. Aliquam sem. Nullam viverra consectetuer. In
-              hendrerit nulla quam nunc, accumsan congue. Lorem ipsum primis in nibh vel risus.
+              hendrerit nulla quam nunc, accumsan congue.
+              <span
+                class="txt-rotate"
+                data-period="2000"
+                data-rotate='[ " Quisque cursus et, lorem ipsum primis." ]'
+              ></span>
             </p>
           </div>
         </div>
-        <p class="slider-dots__text">Sandra, Denver</p>
+        <p class="review-slider-dots__text">Sandra, Denver</p>
       </div>
 
-      <a class="slider__prev" onclick="minusSlide()"></a>
-      <a class="slider__next" onclick="plusSlide()"></a>
+      <a class="review-slider__prev" onclick="minusSlide()"></a>
+      <a class="review-slider__next" onclick="plusSlide()"></a>
     </div>
 
-    <div class="slider-dots">
-      <span class="slider-dots__item" onclick="currentSlide(1)"></span>
-      <span class="slider-dots__item" onclick="currentSlide(2)"></span>
-      <span class="slider-dots__item" onclick="currentSlide(3)"></span>
+    <div class="review-slider-dots">
+      <span class="review-slider-dots__item" onclick="currentSlide(1)"></span>
+      <span class="review-slider-dots__item" onclick="currentSlide(2)"></span>
+      <span class="review-slider-dots__item" onclick="currentSlide(3)"></span>
     </div>
   </div>
 </section>
-<script>
-  /* Индекс слайда по умолчанию */
-  let slideIndex = 1;
-  showSlides(slideIndex);
-
-  /* Функция увеличивает индекс на 1, показывает следующй слайд*/
-  function plusSlide() {
-    showSlides((slideIndex += 1));
-  }
-
-  /* Функция уменьшяет индекс на 1, показывает предыдущий слайд*/
-  function minusSlide() {
-    showSlides((slideIndex -= 1));
-  }
-
-  /* Устанавливает текущий слайд */
-  function currentSlide(n) {
-    showSlides((slideIndex = n));
-  }
-
-  /* Основная функция слайдера */
-  function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName('slider__item');
-    let dots = document.getElementsByClassName('slider-dots__item');
-    if (n > slides.length) {
-      slideIndex = 1;
-    }
-    if (n < 1) {
-      slideIndex = slides.length;
-    }
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = 'none';
-    }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(' active', '');
-    }
-    slides[slideIndex - 1].style.display = 'block';
-    dots[slideIndex - 1].className += ' active';
-  }
-</script>

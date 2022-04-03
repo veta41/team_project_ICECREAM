@@ -1,14 +1,21 @@
 .customers-review {
-  padding-bottom: 120px;
+  background-color: #ffffff;
+  padding-bottom: 48px;
+  @media screen and (min-width: 768px) {
+    padding-bottom: 80px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding-bottom: 120px;
+  }
 }
-.slider {
+.review-slider {
   max-width: 100%;
   position: relative;
   margin: auto;
   height: auto;
 }
 /* Картинка мастабируется по отношению к родительскому элементу */
-.slider__img {
+.review-slider__img {
   object-fit: cover;
   width: 85px;
   height: 85px;
@@ -16,16 +23,22 @@
   margin-bottom: 32px;
   margin-right: auto;
   margin-left: auto;
+  transition: transform 0.7s ease-in-out;
   @media screen and (min-width: 768px) {
     margin-bottom: 20px;
   }
   @media screen and (min-width: 1280px) {
     margin-bottom: 16px;
   }
+
+  &:hover,
+  &:focus {
+    transform: rotate(360deg);
+  }
 }
 /* Кнопки вперед и назад */
-.slider__prev,
-.slider__next {
+.review-slider__prev,
+.review-slider__next {
   cursor: pointer;
   position: absolute;
   top: 0;
@@ -33,13 +46,13 @@
   height: 100%;
   // background-color: red;
 }
-.slider__next {
+.review-slider__next {
   right: 0;
 }
 
 /* Заголовок слайда */
 
-.slider__wrapper {
+.review-slider__wrapper {
   padding: 43px 50px 26px 50px;
   background-color: #fafafa;
 
@@ -76,19 +89,16 @@
   }
 }
 
-.slider__gradient {
+.review-slider__gradient {
   padding: 0 10px 10px;
   background: repeating-linear-gradient(180deg, #fafafa, #fafafa 30px, #e1e1e1 30px, #e1e1e1 31px);
 
   @media screen and (min-width: 768px) {
     padding: 0 30px 10px;
   }
-  @media screen and (min-width: 1280px) {
-    padding: 0 30px 10px;
-  }
 }
 
-.slider__text {
+.review-slider__text {
   z-index: 3;
   position: relative;
   font-weight: 500;
@@ -107,11 +117,11 @@
 }
 
 /* Кружочки */
-.slider-dots {
+.review-slider-dots {
   text-align: center;
 }
 
-.slider-dots__text {
+.review-slider-dots__text {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.86;
@@ -134,7 +144,7 @@
   }
 }
 
-.slider-dots__item {
+.review-slider-dots__item {
   cursor: pointer;
   height: 12px;
   width: 12px;
@@ -160,7 +170,7 @@
 }
 
 /* Анимация слайдов */
-.slider__item {
+.review-slider__item {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
   animation-name: fade;
