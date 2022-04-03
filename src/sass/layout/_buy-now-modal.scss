@@ -1,4 +1,4 @@
-.backdrop {
+.backdrop-buy-now {
   position: fixed;
   top: 0;
   left: 0;
@@ -9,8 +9,7 @@
 
   padding: 15px;
 
-  background-color: rgba(0, 0, 0, 0.2);
-
+  background-color: rgba(255, 184, 202, 0.7);
   visibility: visible;
   opacity: 1;
 
@@ -19,43 +18,66 @@
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.backdrop--is-hidden {
+.backdrop-buy-now--is-hidden {
   visibility: hidden;
   pointer-events: none;
   opacity: 0;
 }
 
-.modal {
+.modal-buy-now {
   position: relative;
 
-  width: 450px;
-  min-height: 300px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  padding-bottom: 20px;
+  perspective: 300px;
 
-  padding: 15px;
+  @media screen and (min-width: 480px) {
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-  /* @media screen and (min-width: 1200px) {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) scale(1);
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-        width: 528px;
-    } */
+  @media screen and (min-width: 768px) {
+    padding-bottom: 0;
+  }
+
+  @media screen and (min-width: 1280px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+
+    // &:hover {
+    //   transform: translate(-50%, -50%) scale(1) rotateY(2turn);
+    // }
+  }
 
   visibility: visible;
   opacity: 1;
 
   background-color: #e17992;
 
-  border-radius: 22px;
+  border-radius: 24px;
 
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../../images/img/buy-now-bg.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.3), rgba(47, 48, 58, 0.3)),
+    url(../images/img/buy-now-bg@1x.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.3), rgba(47, 48, 58, 0.3)),
+      url(../images/img/buy-now-bg@2x.jpg);
+  }
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -65,109 +87,156 @@
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-// .backdrop--is-hidden .modal {
-//   visibility: hidden;
-//   pointer-events: none;
-//   opacity: 0.3;
-//   transform: translate(-50%, -50%) scale(3);
-// }
+.backdrop-buy-now--is-hidden .modal-buy-now {
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0.3;
+  transform: translate(-50%, -50%) scale(2);
+}
 
 .form {
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  padding: 40px;
+  padding: 19px 29px 19px 29px;
   margin-right: auto;
   margin-left: auto;
+
+  @media screen and (min-width: 768px) {
+    padding: 19px 30px 19px 30px;
+  }
 }
 
 .form__title {
-  margin-bottom: 12px;
+  margin-bottom: 42px;
 
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
+  font-family: 'Titan One', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 0.965;
   text-align: center;
 
-  color: #d41443;
+  text-transform: uppercase;
+
+  color: var(--accent-text-color);
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
 }
 
 .form__field {
   position: relative;
-  margin-bottom: 10px;
+
+  margin-bottom: 30px;
+  // &:not(:last-child) {
+  //   margin-bottom: 30px;
+  // }
 
   width: 100%;
 }
 
-// .form__label {
-//   display: block;
-//   margin-bottom: 4px;
+.form__label {
+  position: absolute;
+  top: 50%;
+  left: 20px;
 
-//   font-size: 12px;
-//   line-height: 1.15;
-//   letter-spacing: 0.01em;
+  transform: translateY(-50%);
 
-//   &::after {
-//     content: '';
-//     position: absolute;
-//     bottom: -10px;
-//     left: 0;
+  font-family: 'Titan One';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.313;
 
-//     transform: rotate(90deg);
+  color: var(--accent-text-color);
 
-//     width: 22px;
-//     height: 1px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
-//     background-color: grey;
-//   }
-// }
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form__input:focus + .form__label,
+.form__input:not(:placeholder-shown) + .form__label {
+  transform: translate(65px, -47px);
+}
 
 .form__input {
   position: relative;
   display: block;
-  padding: 12px 12px 12px 42px;
+  padding: 12px 12px 12px 82px;
 
   width: 100%;
   height: 40px;
 
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.313;
+
+  color: var(--secondary-text-color);
+
   outline: none;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 22px;
+  border: none;
+  border-radius: 24px;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
 
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-
-    transform: rotate(90deg);
-
-    width: 22px;
-    height: 1px;
-
-    background-color: grey;
+  &::placeholder {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.313;
   }
 }
 
 .form__button-wrapper {
   display: flex;
+  justify-content: center;
+
+  @media screen and (min-width: 768px) {
+    justify-content: flex-end;
+  }
+
+  width: 100%;
 }
 
 .form__button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
 
-  padding: 10px 10px;
-  margin-left: auto;
-  margin-right: auto;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  border-radius: 22px;
+  &--open {
+    color: #ffffff;
+    background-color: var(--accent-text-color);
 
-  background-color: #fff;
+    &:hover,
+    &focus {
+      color: var(--accent-text-color);
+      background-color: #ffffff;
+    }
+  }
 
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  &--close {
+    @media screen and (min-width: 768px) {
+      position: absolute;
+      bottom: 18px;
+      left: 29px;
+    }
+
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(254, 165, 187, 0.9);
+    &:hover,
+    &focus {
+      color: var(--accent-text-color);
+      background-color: #ffffff;
+    }
+  }
 }
