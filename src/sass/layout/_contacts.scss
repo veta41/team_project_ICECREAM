@@ -1,16 +1,16 @@
 .section-contacts {
     padding-bottom: 48px; 
     justify-content: center;    
-    background-image: linear-gradient(#E5E5E5 22%, #FFF5F6 22%);
+    background-image: linear-gradient(#FFFFFF 22%, #FFF5F6 22%);
     @include media ($tab) {
          padding-bottom: 40px;   
-         background-image: linear-gradient(#E5E5E5 19%, #FFF5F6 19%);
+         background-image: linear-gradient(#FFFFFF 19%, #FFF5F6 19%);
     }
     @include media ($desk) {
         margin: 0 auto;
         padding-bottom: 120px;
         // max-width: 1600px;
-        background-image: linear-gradient(#E5E5E5 14%, #FFF5F6 14%);
+        background-image: linear-gradient(#FFFFFF 14%, #FFF5F6 14%);
      }
 }
 
