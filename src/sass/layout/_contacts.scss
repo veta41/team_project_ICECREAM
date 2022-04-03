@@ -67,16 +67,23 @@
     text-align: center;
     text-transform: uppercase;
     // font-family: 'DM Sans';
-    @include btn-form(80px, 16px, 4px);
+    
     @include font(500, 12px, 22px, 0.04em);
    margin-bottom: 20px; 
    
    &_beige {
-       
+       @include btn-form(80px, 16px, 4px);
        @include btn-color(#FFFFFF, #F0D1A5, #F0D1A5);
+        @include media ($tab) {
+            @include btn-form(73px, 28px, 4px);
+        }
    }   
     &_green {
+        @include btn-form(130px, 16px, 4px);
         @include btn-color(#FFFFFF, #C2E297, #C2E297);
+        @include media ($tab) {
+            @include btn-form(138px, 28px, 4px);
+        }
     }
     @include media ($tab) {
       @include font(500, 16px, 30px, 0.04em); 
