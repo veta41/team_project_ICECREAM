@@ -1,0 +1,66 @@
+ <!--mobile menu -->
+<div class="mobile__block block">
+    <div class="container mobile__container">
+    
+      
+      <button type="button" class="button__open" >
+        <svg class="" width="30" height="30">
+          <use href="./src/images/icons/icons.svg#icon-Burger">
+      
+          </use>
+        </svg>
+      </button>
+      <div class="mobile__menu">
+        <nav class="navigation">    
+          <button class="btn__header" type="button">Buy now</button>
+              
+                
+            <ul class="nav__list">
+                <li class="nav__item">
+                  <a class="nav__link nav__link--current" href="./index.html"> Home</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href=""> About us</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href=""> How it’s made?</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href=""> Our products</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href=""> Contact</a>
+                </li>
+                
+            </ul>
+        </nav>
+        
+        
+        <button type="button" class="button__close">
+          <svg class="" width="30" height="30">
+            <use href="./src/images/icons/icons.svg#icon-close">
+        
+            </use>
+          </svg>
+        </button>
+      </div>
+    </div>
+</div>
+
+    
+    <script>
+        (() => {
+  const refs = {
+    openMenuBtn: document.querySelector('.button__open'),
+    closeMenuBtn: document.querySelector('.button__close'),
+    menu: document.querySelector('.mobile__menu'),
+  };
+
+  refs.openMenuBtn.addEventListener('click', toggleMenu);
+  refs.closeMenuBtn.addEventListener('click', toggleMenu);
+
+  function toggleMenu() {
+    refs.menu.classList.toggle('is-open');
+  }
+})();
+    </script>
