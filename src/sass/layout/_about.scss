@@ -55,7 +55,7 @@
     }
 }
 
-.title {
+.about__title {
     @include font(400, 34px, 39px, 0.06em);
     text-align: center;
     text-transform: uppercase;
@@ -115,4 +115,18 @@
         @include font(null, 14px, 25px, null);
         margin-bottom: 40px;
     }
+}
+
+.btn-about {
+    @include indents(0, 0, auto, 0px);
+    @include btn-form(176px, 44px, 22px);
+    @include btn-color(#D41443, #FFFFFF, #ECEBEB);
+    @include font(700, 16px, 21px, null);
+    border: none;
+}
+
+.bnt-about__icon {
+    width: 4.43px;
+    height: 8px;
+    margin-left: 13.62px;
 }
