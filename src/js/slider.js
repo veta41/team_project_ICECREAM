@@ -1,27 +1,36 @@
-/* Индекс слайда по умолчанию */
 let slideIndex = 1;
 showSlides(slideIndex);
 
-/* Функция увеличивает индекс на 1, показывает следующй слайд*/
-function plusSlide() {
+let prev = document.getElementById('slidePrev');
+let next = document.getElementById('slideNext');
+let slideOne = document.getElementById('slideOne');
+let slideTwo = document.getElementById('slideTwo');
+let slideThree = document.getElementById('slideThree');
+
+next.addEventListener('click', function () {
   showSlides((slideIndex += 1));
-}
+});
 
-/* Функция уменьшяет индекс на 1, показывает предыдущий слайд*/
-function minusSlide() {
+prev.addEventListener('click', function () {
   showSlides((slideIndex -= 1));
-}
+});
 
-/* Устанавливает текущий слайд */
-function currentSlide(n) {
-  showSlides((slideIndex = n));
-}
+slideOne.addEventListener('click', function () {
+  showSlides((slideIndex = 1));
+});
 
-/* Основная функция слайдера */
+slideTwo.addEventListener('click', function () {
+  showSlides((slideIndex = 2));
+});
+
+slideThree.addEventListener('click', function () {
+  showSlides((slideIndex = 3));
+});
+
 function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName('review-slider__item');
-  let dots = document.getElementsByClassName('review-slider-dots__item');
+  var i;
+  var slides = document.getElementsByClassName('review-slider__item');
+  var dots = document.getElementsByClassName('review-slider-dots__item');
   if (n > slides.length) {
     slideIndex = 1;
   }
