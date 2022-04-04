@@ -1,4 +1,5 @@
 .overlay {
+  //   pointer-events: all;
   position: fixed;
 
   opacity: 1;
@@ -22,7 +23,6 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  z-index: 1;
 
   display: flex;
   flex-direction: column;
@@ -59,12 +59,16 @@
   box-shadow: 9px 10px 16px 11px rgba(128, 0, 0, 0.6);
 
   &:hover {
+    cursor: default;
+  }
+
+  .overlay:hover & {
     transform: translate(-50%, -50%) scale(1, 1) perspective(400px) rotateY(180deg);
     box-shadow: -9px 10px 16px 11px rgba(128, 0, 0, 0.6);
   }
 
-  &:hover .readmore__text,
-  &:hover .readmore__title {
+  .overlay:hover & .readmore__text,
+  .overlay:hover & .readmore__title {
     transform: rotateY(180deg);
   }
 }
@@ -82,10 +86,4 @@
 
   text-align: center;
   transition: transform 400ms ease-in;
-}
-
-.btn-about {
-  display: block;
-  width: 100px;
-  margin: auto;
 }
