@@ -1,21 +1,30 @@
-// .products__item.accent--pink {
-//   transition: transform 300ms;
-//   transform: perspective(400px) rotateY(180deg);
-// }
-
 .products__item-pink {
-  //   transition: transform 300ms;
   transform: translateX(-100%) perspective(400px) rotateY(180deg);
+  transform: translateX(-100%) perspective(400px) rotateY(180deg) translateX(-100%);
 }
 
 .products__item-caramel {
-  //   transition: transform 300ms;
   transform: perspective(400px) rotateX(180deg);
+
+  animation-name: changeBgColor;
+  animation-duration: 3000ms;
 }
 
 .products__item-green {
-  //   transition: transform 300ms;
-  //   transform: perspective(400px) rotateY(180deg);
   transform-origin: 70% 10%;
   transform: rotate(-155deg);
 }
+
+// @keyframes changeBgColor {
+//   0% {
+//     background-color: teal;
+//   }
+
+//   50% {
+//     background-color: orange;
+//   }
+
+//   100% {
+//     background-color: deepskyblue;
+//   }
+// }
