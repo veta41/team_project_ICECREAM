@@ -241,6 +241,9 @@ a {
         @include btn-form(198px, 44px, 22px);
     }
     margin-bottom: 10px;
+        @include media ($tab) {
+            margin-bottom: 0px;
+        }
 }
     &__franch { 
         @include font(700, 16px, 21px, null);
