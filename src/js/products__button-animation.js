@@ -1,6 +1,6 @@
 const pinkCard = document.querySelector('.products__item.accent--pink');
 const pinkButton = document.querySelector('.products__item.accent--pink .products__btn');
-pinkCard.setAttribute('style', `transition: transform 350ms ease;`);
+pinkCard.setAttribute('style', `transition: transform 500ms ease;`);
 
 console.log(pinkCard);
 console.log(pinkButton);

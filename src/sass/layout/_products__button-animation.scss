@@ -5,7 +5,7 @@
 
 .products__item-pink {
   //   transition: transform 300ms;
-  transform: perspective(400px) rotateY(180deg);
+  transform: translateX(-100%) perspective(400px) rotateY(180deg) translateX(-100%);
 }
 
 .products__item-caramel {
