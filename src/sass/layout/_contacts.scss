@@ -232,6 +232,7 @@ a {
     }
     &__locat {
     @include btn-color( #FFFFFF,#D41342, #D41342);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     @include font(700, 16px, 21px, null);
     @include btn-form(162px, 44px, 22px);
     @include media ($tab) {
@@ -248,6 +249,7 @@ a {
     &__franch { 
         @include font(700, 16px, 21px, null);
         @include btn-color(#D41443, #FFFFFF, #ECEBEB);
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         @include btn-form(162px, 44px, 22px);
         @include media ($tab) {
             @include btn-form(174px, 44px, 22px);

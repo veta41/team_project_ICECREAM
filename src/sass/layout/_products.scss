@@ -62,7 +62,7 @@
   }
 
   @media  screen and (min-width:1280px) {
-    
+    margin-bottom: 261px;
     font-size: 58px;
     line-height: 1.14;
     letter-spacing: 0.06em;
@@ -72,7 +72,7 @@
  
  .products__item-title{
     font-weight: 400;
-    padding-top: 155px;
+    padding-top: 160px;
     margin-bottom: 32px;
     font-family: 'Titan One', sans-serif;
     font-size: 20px;
@@ -102,6 +102,11 @@
       background-image: url(../images/img/p-ellipsis2x.png);
   }
    }
+
+   @media  screen and (min-width:768px) {
+    padding-top: 118px;
+    
+  }
 
    @media  screen and (min-width:1280px) {
     padding-top: 165px;
@@ -222,9 +227,9 @@
 
  .products-icon{
    
- display: flex;
+  display: flex;
   justify-content: center;
- align-items: center;
+  align-items: center;
 
 
  }
@@ -241,24 +246,131 @@
    }
  }
 
-.products__trumb{
-  position:relative
+
+.products__trumb::before{
+  display: block;
+  position: absolute;
+  top: 0%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  content:'';
+  background-repeat: no-repeat;
+  background-size: contain;
+  
 }
 
+.trumb-pink::before{
+  background-image: url(../images/img/p1-mob_1x.png);
+  width: 280px;
+  height: 280px;
 
- .products__img{
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   
-   margin-bottom: 20px;
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    background-image: url(../images/img/p1-mob_2x.png);
+  }
 
-   @media  screen and (min-width: 768px) {
-   
-    margin-bottom: 32px;
-   }
+  @media  screen and (min-width: 768px) {
+    background-image: url(../images/img/p1-tab_1x.png);
+    width: 224px;
+    height: 224px;
 
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    background-image: url(../images/img/p1-tab_2x.png);
+  }
+  }
+
+  @media  screen and (min-width: 1280px) {
+    background-image: url(../images/img/p1-desk_1x.png);
+    top: -10%;
+    width: 394px;
+    height: 394px;
   
- }
+
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    background-image: url(../images/img/p1-desk_2x.png);
+  }
+}
+}
+
+.trumb-caramel::before{
+
+  background-image: url(../images/img/p2-mob_1x.png);
+  width: 280px;
+  height: 280px;
+
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    background-image: url(../images/img/p2-mob_2x.png);
+  }
+
+  @media  screen and (min-width: 768px) {
+    background-image: url(../images/img/p2-tab_1x.png);
+    width: 224px;
+    height: 224px;
+
+    @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    background-image: url(../images/img/p2-tab_2x.png);
+  }
+  }
+
+  @media  screen and (min-width: 1280px) {
+    background-image: url(../images/img/p2-desk_1x.png);
+    top: -10%;
+    width: 394px;
+    height: 394px;
+  
+
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    background-image: url(../images/img/p2-desk_2x.png);
+  }
+}
+}
+
+.trumb-green::before{
+  background-image: url(../images/img/p3-mob_1x.png);
+  width: 280px;
+  height: 280px;
+
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    background-image: url(../images/img/p3-mob_2x.png);
+  }
+
+  @media  screen and (min-width: 768px) {
+    background-image: url(../images/img/p3-tab_1x.png);
+    width: 224px;
+    height: 224px;
+
+    @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    background-image: url(../images/img/p3-tab_2x.png);
+  }
+  }
+
+  @media  screen and (min-width: 1280px) {
+    background-image: url(../images/img/p3-desk_1x.png);
+    top: -10%;
+    width: 394px;
+    height: 394px;
+  
+
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    background-image: url(../images/img/p3-desk_2x.png);
+  }
+}
+}
 
