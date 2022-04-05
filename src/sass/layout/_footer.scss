@@ -116,12 +116,7 @@
     }
 
     &__icons {
-        height: 60px;
         fill: currentColor;
-
-        @media screen and (min-width: 1280px) {
-            height: 34px;
-        }
     }
 
     &__contact {
