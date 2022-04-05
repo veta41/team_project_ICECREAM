@@ -7,16 +7,11 @@
 
   const maxWidth = document.body.clientWidth;
 
-  // refs.openModalBtn.addEventListener('click', toggleModal);
-  // refs.closeModalBtn.addEventListener('click', toggleModal);
-
   refs.openModalBtn.addEventListener('click', addModal);
   refs.closeModalBtn.addEventListener('click', removeModal);
 
   function addModal() {
-    // document.body.classList.add('modal-map-open');
     refs.modal.classList.remove('is-hidden');
-    // console.log('ddddddddddddddddddd');
     document.body.setAttribute('style', `max-width: ${maxWidth}px; overflow: hidden;`);
   }
 
@@ -25,9 +20,4 @@
     refs.modal.classList.add('is-hidden');
     document.body.removeAttribute('style');
   }
-
-  // function toggleModal() {
-  //   document.body.classList.toggle('modal-map-open');
-  //   refs.modal.classList.toggle('is-hidden');
-  // }
 })();

@@ -6,15 +6,12 @@
   };
   const maxWidth = document.body.clientWidth;
 
-  // refs.openModalBtn.addEventListener("click", toggleModal);
-  // refs.closeModalBtn.addEventListener("click", toggleModal);
- refs.openModalBtn.addEventListener('click', addModal);
+  refs.openModalBtn.addEventListener('click', addModal);
   refs.closeModalBtn.addEventListener('click', removeModal);
 
 
   function addModal() {
-    // refs.modal.classList.toggle("is-hidden");
-    refs.modal.classList.remove('is-hidden');
+     refs.modal.classList.remove('is-hidden');
      document.body.setAttribute('style', `max-width: ${maxWidth}px; overflow: hidden;`);
   }
 
