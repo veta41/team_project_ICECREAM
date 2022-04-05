@@ -4,9 +4,11 @@
     closeModalBtn: document.querySelector('[data-modal-map-close]'),
     modal: document.querySelector('[data-modal-map]'),
   };
-
-  refs.openModalBtn.addEventListener('click', toggleModal);
-  refs.closeModalBtn.addEventListener('click', toggleModal);
+const maxWidth = document.body.clientWidth;
+  // refs.openModalBtn.addEventListener('click', toggleModal);
+  // refs.closeModalBtn.addEventListener('click', toggleModal);
+ // refs.openModalBtn.addEventListener('click', toggleModal);
+  // refs.closeModalBtn.addEventListener('click', toggleModal);
 
   function toggleModal() {
     document.body.classList.toggle('modal-map-open');
