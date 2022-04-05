@@ -14,22 +14,26 @@
     }
   }
 
-  @include media($tab) {
-    padding-top: 20px;
-    padding-bottom: 80px;
-  }
+    @include media($tab) {
+        padding-top: 20px;
+        padding-bottom: 80px;
+    }
+        
+    @include media($desk) {
+        padding-top: 60px;
+        padding-bottom: 99px;
 
-  @include media($desk) {
-    padding-top: 60px;
-    padding-bottom: 99px;
-
-    background-image: url('../images/img/m2-desk_1x.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position-y: 255px;
-
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url('../images/img/m2-desk_2x.png');
+        background-image: url('../images/img/m2-desk_1x.png');
+        background-repeat: no-repeat;
+        background-size: 1280px 521px;
+        background-position-y: 255px;
+        background-position-x: center;
+        
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url('../images/img/m2-desk_2x.png');
+        }
     }
   }
 }
@@ -77,6 +81,48 @@
     justify-content: center;
     align-items: center;
   }
+}
+
+.about-img {
+    width: 280px;
+    height: 279px;
+    background-image: url('../images/img/m1-mob_1x.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: url('../images/img/m1-mob_2x.png');
+    }
+
+    @include media($tab) {
+        width: 336px;
+        height: 335px;
+        background-image: url('../images/img/m1-tab_1x.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url('../images/img/m1-tab_2x.png');
+        }
+    }
+
+    @include media($desk) {
+        width: 501px;
+        height: 501px;
+        background-image: url('../images/img/m1-desk_1x.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url('../images/img/m1-desk_2x.png');
+        }
+    }
 }
 
 .about-text {
