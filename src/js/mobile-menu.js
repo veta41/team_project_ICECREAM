@@ -12,7 +12,6 @@
   function toggleMenu() {
     refs.openMenuBtn.classList.toggle('visually-hidden');
     refs.btn__header.classList.toggle('visually-hidden');
-    // console.log(openMenuBtn.classList.toggle('visually-hidden'));
     refs.menu.classList.toggle('is-open');
   }
 })();
