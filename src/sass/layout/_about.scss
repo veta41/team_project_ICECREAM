@@ -168,6 +168,7 @@
   @include btn-form(176px, 44px, 22px);
   @include btn-color(#d41443, #ffffff, #ecebeb);
   @include font(700, 16px, 21px, null);
+  margin: 0;
   border: none;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
