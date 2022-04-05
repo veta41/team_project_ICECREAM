@@ -414,6 +414,7 @@ padding-bottom: 17px;
     @include font (400, 8px, 10px, null); 
     @include btn-color(#FFFFFF, #D41443,#C7133E);
     @include btn-form(62.4px, 24px, 20px);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
     margin-right: 8px;
 
@@ -429,6 +430,7 @@ padding-bottom: 17px;
     @include font (400, 8px, 10px, null); 
     @include btn-color(#D41443,#FFFFFF,#ECEBEB);
     @include btn-form(82.8px, 24px, 20px);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     @include media(1280px) {
         @include font (400, 14px, 18px, null); 
