@@ -16,7 +16,7 @@
   function addModal() {
     // document.body.classList.add('modal-map-open');
     refs.modal.classList.remove('is-hidden');
-    console.log('ddddddddddddddddddd');
+    // console.log('ddddddddddddddddddd');
     document.body.setAttribute('style', `max-width: ${maxWidth}px; overflow: hidden;`);
   }
 
