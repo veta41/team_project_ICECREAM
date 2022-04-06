@@ -61,6 +61,10 @@
   &:focus {
     color: var(--accent-text-color);
   }
+
+  &--current {
+    color: var(--accent-text-color);
+  }
 }
 
 .nav__item {
