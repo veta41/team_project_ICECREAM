@@ -71,7 +71,7 @@ html {
   font-style: normal;
   @include font(700, 16px, 21px, null);
   color: var(--primary-text-color);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:focus,
   &:hover {
