@@ -72,12 +72,10 @@ html {
   @include font(700, 16px, 21px, null);
   color: var(--primary-text-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  
 
   &:focus,
   &:hover {
     color: var(--accent-text-color);
-    
   }
 }
 
@@ -236,7 +234,7 @@ html {
   height: 344px;
   position: absolute;
   bottom: 75px;
-  left: 36px;
+  left: 65px;
   z-index: 0;
 
   @include media(480px) {
@@ -261,7 +259,7 @@ html {
 .icecream-cone {
   position: absolute;
   top: 92px;
-  left: 117px;
+  left: 150px;
   z-index: 1;
   animation-name: icecream-cone;
   animation-duration: 1s;
@@ -429,13 +427,11 @@ html {
   }
 }
 
-.button-wrap li:first-child {
-    margin-right: 8px;
-
-  @include media(1280px) {
+.button-wrap__item {
+  margin-right: 8px;
+  @media screen and (min-width: 1280px) {
     margin-right: 12px;
   }
-
 }
 
 .hero-primary-btn {
