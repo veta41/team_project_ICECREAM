@@ -71,11 +71,12 @@ html {
   font-style: normal;
   @include font(700, 16px, 21px, null);
   color: var(--primary-text-color);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
 
   &:focus,
   &:hover {
     color: var(--accent-text-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
@@ -237,6 +238,10 @@ html {
   left: 36px;
   z-index: 0;
 
+  @include media(480px) {
+    left: 68px;
+  }
+
   @include media(768px) {
     width: 335px;
     height: 333px;
@@ -268,6 +273,9 @@ html {
     100% {
       transform: translateY(0);
     }
+  }
+  @include media(480px) {
+    left: 151px;
   }
 
   @include media(768px) {
@@ -340,8 +348,11 @@ html {
   }
 }
 
-.arrow-right {
+.btn-arrow-right {
+  border-radius: 50%;
+  cursor: pointer;
   position: absolute;
+
   @media screen and (max-width: 767px) {
     display: none;
   }
@@ -417,19 +428,24 @@ html {
   }
 }
 
+.button-wrap li:first-child {
+    margin-right: 8px;
+
+  @include media(1280px) {
+    margin-right: 12px;
+  }
+
+}
+
 .hero-primary-btn {
   @include font(400, 8px, 10px, null);
   @include btn-color(#ffffff, #d41443, #c7133e);
   @include btn-form(62.4px, 24px, 20px);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  margin-right: 8px;
-
   @include media(1280px) {
     @include font(400, 14px, 18px, null);
     @include btn-form(107px, 40px, 20px);
-
-    margin-right: 12px;
   }
 }
 
