@@ -234,7 +234,7 @@ html {
   height: 344px;
   position: absolute;
   bottom: 75px;
-  left: 36px;
+  left: 65px;
   z-index: 0;
 
   @include media(768px) {
@@ -255,7 +255,7 @@ html {
 .icecream-cone {
   position: absolute;
   top: 92px;
-  left: 117px;
+  left: 150px;
   z-index: 1;
   animation-name: icecream-cone;
   animation-duration: 1s;
