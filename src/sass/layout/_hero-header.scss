@@ -417,19 +417,26 @@ html {
   }
 }
 
+.button-wrap__item {
+  margin-right: 8px;
+  @media screen and (min-width: 1280px) {
+    margin-right: 12px;
+  }
+}
+
 .hero-primary-btn {
   @include font(400, 8px, 10px, null);
   @include btn-color(#ffffff, #d41443, #c7133e);
   @include btn-form(62.4px, 24px, 20px);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  margin-right: 8px;
+  // margin-right: 8px;
 
   @include media(1280px) {
     @include font(400, 14px, 18px, null);
     @include btn-form(107px, 40px, 20px);
 
-    margin-right: 12px;
+    // margin-right: 12px;
   }
 }
 
