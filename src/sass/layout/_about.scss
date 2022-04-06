@@ -151,13 +151,30 @@
 }
 
 .about-text__description-bottom {
-    color: var(--secondary-text-color);
-    margin-bottom: 20px;
+  color: var(--secondary-text-color);
+  // margin-bottom: 20px;
 
-    @include media($tab) {
-        @include font(null, 14px, 25px, null);
-        margin-bottom: 40px;
-    }
+  @include media($tab) {
+    @include font(null, 14px, 25px, null);
+    // margin-bottom: 40px;
+  }
+}
+
+.about-text__description-under-bottom {
+  color: var(--secondary-text-color);
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  @include media($tab) {
+    @include font(null, 14px, 25px, null);
+    margin-top: 24px;
+    margin-bottom: 40px;
+  }
+
+  @include media($desk) {
+    @include font(null, 16px, 28px, null);
+    margin-top: 44px;    
+  }
 }
 
 .btn-about {
