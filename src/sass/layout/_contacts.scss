@@ -1,5 +1,5 @@
 .section-contacts {
-    padding-bottom: 48px; 
+   padding-bottom: 48px; 
     justify-content: center;    
     background-image: linear-gradient(#FFFFFF 22%, #FFF5F6 22%);
     @include media ($tab) {
@@ -7,7 +7,7 @@
          background-image: linear-gradient(#FFFFFF 19%, #FFF5F6 19%);
     }
     @include media ($desk) {
-        margin: 0 auto;
+        // margin: 0 auto;
         padding-bottom: 120px;
         // max-width: 1600px;
         background-image: linear-gradient(#FFFFFF 14%, #FFF5F6 14%);
@@ -15,8 +15,11 @@
 }
 
 .catering__list {
-    max-width: $mob;
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 32px;
+
     @include media ($tab) {
         max-width: $tab;
       margin-bottom: 40px;  
@@ -230,6 +233,13 @@ a {
     @include media ($desk){
         width: 393px;
     }
+    &__item:not(:last-child){
+        margin-bottom: 10px;
+        
+        @include media ($tab) {
+            margin-bottom: 0px;
+        }
+    }
     &__locat {
     @include btn-color( #FFFFFF,#D41342, #C7133E);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -241,11 +251,7 @@ a {
     @include media ($desk) {
         @include btn-form(198px, 44px, 22px);
     }
-    margin-bottom: 10px;
-        @include media ($tab) {
-            margin-bottom: 0px;
-        }
-}
+ }
     &__franch { 
         @include font(700, 16px, 21px, null);
         @include btn-color(#D41443, #FFFFFF, #ECEBEB);
