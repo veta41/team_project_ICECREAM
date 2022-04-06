@@ -152,11 +152,9 @@
 
 .about-text__description-bottom {
   color: var(--secondary-text-color);
-  // margin-bottom: 20px;
 
   @include media($tab) {
     @include font(null, 14px, 25px, null);
-    // margin-bottom: 40px;
   }
 }
 
